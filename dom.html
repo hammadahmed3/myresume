@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="main">
+
+
+
+    <script>
+        let DOM = document.getElementById("main");
+
+        let div1 = document.createElement("div");
+        DOM.appendChild(div1);
+
+        let heading = document.createElement("h1");
+        let head1 = document.createTextNode("Registration form")
+        heading.appendChild(head1)
+        div1.appendChild(heading)
+
+        let input1 = document.createElement("input")
+        input1.setAttribute("type", "text")
+        input1.setAttribute("placeholder", "Name")
+        input1.setAttribute("id", "inp1")
+        div1.appendChild(input1)
+
+        let input2 = document.createElement("input")
+        input2.setAttribute("type", "password")
+        input2.setAttribute("id", "inp2")
+        input2.setAttribute("placeholder", "Password")
+
+        let input3 = document.createElement("input")
+        input3.setAttribute("type", "password")
+        input3.setAttribute("id", "inp3")
+        input3.setAttribute("placeholder", "Confirm Password")
+
+        let input4 = document.createElement("input")
+        input4.setAttribute("type", "text")
+        input4.setAttribute("id", "inp4")
+        input4.setAttribute("placeholder", "Address")
+
+        let input5 = document.createElement("input")
+        input5.setAttribute("type", "text")
+        input5.setAttribute("id", "inp5")
+        input5.setAttribute("placeholder", "Phone Number")
+
+        let input6 = document.createElement("input")
+        input6.setAttribute("type", "text")
+        input6.setAttribute("id", "inp6")
+        input6.setAttribute("placeholder", "City")
+
+        
+        let button = document.createElement("button")
+        let t1 = document.createTextNode("Submit")
+        button.setAttribute("onClick", "submit()")
+        button.appendChild(t1)
+
+
+        let linebreak = document.createElement("br")
+        let linebreak1 = document.createElement("br")
+        let linebreak2 = document.createElement("br")
+        let linebreak3 = document.createElement("br")
+        let linebreak4 = document.createElement("br")
+        let linebreak5 = document.createElement("br")
+        let linebreak6 = document.createElement("br")
+        let linebreak7 = document.createElement("br")
+    
+
+
+        div1.appendChild(linebreak)
+        div1.appendChild(input2)
+        div1.appendChild(linebreak2)
+        div1.appendChild(input3)
+        div1.appendChild(linebreak3)
+        div1.appendChild(input4)
+        div1.appendChild(linebreak4)
+        div1.appendChild(input5)
+        div1.appendChild(linebreak5)
+        div1.appendChild(input6)
+        div1.appendChild(linebreak6)
+        div1.appendChild(linebreak7)
+        div1.appendChild(button)
+
+        console.log(DOM)
+
+        let submit = () => {
+
+            let inp1 = document.getElementById("inp1").value;
+            let inp2 = document.getElementById("inp2").value;
+            let inp3 = document.getElementById("inp3").value;
+            let inp4 = document.getElementById("inp4").value;
+            let inp5 = document.getElementById("inp5").value;
+            let inp6 = document.getElementById("inp6").value;
+
+
+
+            if (inp1 === "" || inp2 === "" || inp3 === "" || inp4 === "" || inp5 === "" || inp6 === "") {
+                alert("Please Fill All Required Fields")
+            }
+            else {
+                console.log(inp1, inp2, inp3, inp4, inp5, inp6)
+            }
+        }
+
+    </script>
+</body>
+
+</html>
